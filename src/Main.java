@@ -26,8 +26,9 @@ class Solution {
             // Check overflow and underflow conditions.
             if ((result > Integer.MAX_VALUE / 10) ||
                     (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
-                // If integer overflowed return 2^31-1, otherwise if underflowed return -2^31.
+//                 If integer overflowed return 2^31-1, otherwise if underflowed return -2^31.
                 return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+                //return Integer.MAX_VALUE * sign; this doesn't work because last digitt in maxcx and min different
             }
 
             // Append current digit to the result.
